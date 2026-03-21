@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Name — Playground</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Add project-specific theme overrides here
+    // IMPORTANT: use tailwind.config (NOT tailwindcss.config)
+    // tailwind.config = {
+    //   theme: {
+    //     extend: {
+    //       colors: { ... },
+    //       fontFamily: { ... },
+    //     },
+    //   },
+    // }
+  </script>
+  <!-- Add project-specific font imports here -->
+  <style>
+    /* Phone frame */
+    .phone-frame {
+      width: 390px;
+      height: 844px;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+      position: relative;
+      flex-shrink: 0;
+      transform: scale(0.7);
+      transform-origin: top left;
+      margin-right: calc(-390px * 0.3);
+      margin-bottom: calc(-844px * 0.3);
+    }
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 28px;
+      background: #000;
+      border-radius: 0 0 16px 16px;
+      z-index: 50;
+    }
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      position: relative;
+    }
+    .phone-screen::-webkit-scrollbar { display: none; }
+    .phone-screen { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-neutral-950 min-h-screen text-white font-sans">
+
+  <!-- Toolbar -->
+  <div class="fixed top-0 left-0 right-0 z-50 bg-neutral-950/90 backdrop-blur border-b border-neutral-800 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="text-neutral-400 hover:text-white text-sm">&larr; Hub</a>
+      <span class="text-neutral-600">|</span>
+      <h1 class="text-sm font-medium">Screen Name</h1>
+    </div>
+    <div class="flex items-center gap-2 text-xs text-neutral-500">
+      <span>390 &times; 844</span>
+      <span class="text-neutral-700">|</span>
+      <span>iPhone 15 Pro</span>
+    </div>
+  </div>
+
+  <!--
+    LAYOUT CONVENTIONS:
+    - Rows (vertical)  = different design directions
+    - Columns (horizontal) = iterations of the same direction
+    - Row 1 = final design (move it here when decided)
+    - Label finals with text-coral-500 or text-green-500 to stand out
+  -->
+  <div class="flex flex-col gap-4 px-6 pt-16 pb-10">
+
+    <!-- Row 1: Final design goes here (promote when ready) -->
+    <div class="flex gap-4 overflow-x-auto items-start">
+
+    <!-- Variant A -->
+    <div class="flex flex-col items-center gap-3">
+      <span class="text-xs font-medium tracking-widest uppercase text-neutral-500">Variant A</span>
+      <div class="phone-frame border-2 border-neutral-800">
+        <div class="phone-screen bg-white">
+
+          <!-- YOUR DESIGN GOES HERE -->
+          <div class="pt-14 px-6 pb-8">
+            <p class="text-neutral-400 text-center mt-40">Start designing here</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Copy the Variant A block to add more variants horizontally -->
+
+    </div><!-- end Row 1 -->
+
+    <!-- Add more rows below for different design directions -->
+
+  </div>
+
+</body>
+</html>
